@@ -10,12 +10,11 @@ public class SetupTestDependencies
     public static void RegisterGlobalDependencies(ContainerBuilder containerBuilder)
     {
         containerBuilder.RegisterType<MyImpl>().As<IMyImpl>().SingleInstance();
-
-        containerBuilder.AddReqnrollBindings<SetupTestDependencies>();
     }
     
     [ScenarioDependencies]
     public static void RegisterScenarioDependencies(ContainerBuilder containerBuilder)
     {
+        containerBuilder.AddReqnrollBindings<SetupTestDependencies>();
     }
 }
